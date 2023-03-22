@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400&family=Markazi+Text:wght@400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Karla', sans-serif;
+font-family: 'Markazi Text', serif; */
+
+:root {
+  --mainColor: #495e57;
+  --secondaryColor: #f4ce14;
+  --lightColor: #edefee;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 126.5px;
+  background-color: #edefee;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  margin: 0 2rems;
+  color: black;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+}
+
+nav a:hover {
+  color: var(--secondaryColor);
+  text-decoration: underline;
+}
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--mainColor);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  header .responsive_nav {
+    transform: none;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+}
